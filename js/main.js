@@ -12,6 +12,7 @@ const app = Vue.createApp({
                 item: this.newItem,
                 //inputから送られてきた値を取得しitemプロパティへ入れる
                 isDone: false
+                //タスクの真偽値を設定
             }
             this.todos.push(todo)
             //配列に追加
