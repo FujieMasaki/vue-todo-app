@@ -9,8 +9,9 @@ const app = Vue.createApp({
             if (this.newItem === '') return
             let todo = {
                 //todoはオブジェクト
-                item: this.newItem
-                //inputから送られてきた値を取得するしitemプロパティへ入れる
+                item: this.newItem,
+                //inputから送られてきた値を取得しitemプロパティへ入れる
+                isDone: false
             }
             this.todos.push(todo)
             //配列に追加

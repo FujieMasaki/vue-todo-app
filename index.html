@@ -11,12 +11,13 @@
     <div id="app">
         <h2>TODO List</h2>
         <form v-on:submit.prevent>
-            <input type="" v-model="newItem">
+            <input type="" v-model="newItem" >
             <button v-on:click="addItem">Add</button>
         </form>
         <ul>
             <li v-for="todo in todos">
-                <span>{{ todo.item }}</span>
+                <input type="checkbox" v-model="todo.isDone" >
+                <span v-bind:class="{done: todo.isDone}">{{ todo.item }}</span>
             </li>
         </ul>
 
